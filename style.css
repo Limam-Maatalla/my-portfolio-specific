@@ -2,16 +2,21 @@
     margin: 0;
     padding: 0;
 }  
+body{
+    position: relative;
+}
 
 header{
+    margin-bottom: 14px;
     display: flex;
     justify-content: space-between;
     width: 100%;
     box-shadow: 0 15px 25px rgba(1 1 1 / 15%);
+    position: fixed;
+    z-index: -1;
 }
 .logo{
     padding: 6px;
-    margin-right: 8px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
@@ -33,4 +38,12 @@ nav ul li a{
     color: black;
     padding: 6px;
     
+}
+section{
+    margin-bottom: 200px;
+    width: 100%;
+    min-height: 100vh;
+    background: red;
+   
+   
 }
