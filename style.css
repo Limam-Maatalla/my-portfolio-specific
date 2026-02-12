@@ -7,19 +7,29 @@ body{
 }
 
 header{
-    margin-bottom: 14px;
-    display: flex;
-    justify-content: space-between;
     width: 100%;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     box-shadow: 0 15px 25px rgba(1 1 1 / 15%);
     position: fixed;
-    z-index: -1;
+    z-index: 1;
+    background: white;
 }
 .logo{
+    margin-left:  2%;
     padding: 6px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+   
 }
 
 nav  ul {
@@ -30,20 +40,83 @@ nav  ul {
    list-style: none;
    padding: 6px;
    
-
+   
 }
 nav ul li a{
     text-decoration: none;
-    margin-right: 6px;
+    margin-right: 4px;
     color: black;
-    padding: 6px;
+    padding: 4px;
+    flex-shrink: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 5s;
     
 }
-section{
+nav ul li a:hover{
+   border-bottom: solid 1px #e0d0d0;
+   color: #0cabeb;
+}  
+.home{
+    background: #001;
     margin-bottom: 200px;
     width: 100%;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+   
+    
+}
+.works{
+    margin-left: 150px;
+}
+.works h2{
+    margin-bottom: 10px;
+    font-style: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: white;
+}
+.works p{
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: white;
+}
+.works .link-but button{
+    background: white;
+    font-size: 20px;
+    border: none;
+    outline: non;
+    border-radius: 6px;
+    padding: 8px;
+    transition: 0.5s ease-in ;
+}
+.works .link-but button:hover{
+    background: none;
+    border: solid 1px white;
+    color: white;
+   
+}
+.works .social {
+    margin-top: 10px;
+}
+.social a i {
+    
+    margin-left: 6pxpx;
+    border-radius: 4px;
+    font-size: 25px;
+    color: white;
+    transition: 0.5s;
+}
+.social a i:hover{
+    scale: 1.1;
+    background-color: rgb(144, 200, 223);
+}
+
+.projects{
+   
     background: red;
-   
-   
+    width: 100%;
+    min-height: 100vh;
 }
