@@ -68,9 +68,7 @@ header nav a{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    display: none;
    
-    
 }
 .works{
     margin-left: 150px;
@@ -202,6 +200,11 @@ h1{
         display: inline-block;
        
     }
+
+    #menu-btn .fa-times{
+        transform: rotate(180deg);
+    }
+
    header nav{
    position: absolute;
    top: 99%;
@@ -210,8 +213,13 @@ h1{
    border-top: 1px solid rgb(87, 81, 81);
    background: #567ac9; 
    display: block;
+   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
    
    
+   }
+
+   header nav .active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
    }
 
    header nav a{
