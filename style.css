@@ -92,6 +92,8 @@ section.main{
     font-size: var(--size);
     padding: 6px;
     text-transform: capitalize;
+    letter-spacing: 1px;
+    
 }
 .main .info .link-but{
     padding: 6px;
