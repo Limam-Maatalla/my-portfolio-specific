@@ -1,4 +1,3 @@
-
 :root{
     --bgheader: #D3D3D3;
     --navColor: #C0C0C0;
@@ -14,93 +13,102 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 } 
+
 body{
-    position: relative;
     width: 100%;
+    padding-top: 90px;
 }
+
+/* ================= HEADER ================= */
+
 header{
     width: 100%;
-    height: 100px;
+    height: 80px;
     box-shadow: 0 8px 10px var(--bgheader);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 8px;
+    padding: 0 20px;
     position: fixed;
-    left: 0; right: 0; top: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
+    background: white;
 }
+
 header .logo{
     color: var(--color);
     font-size: var(--size);
-    text-transform: uppercase;
     font-weight: 700;
 }
+
 header nav{
-    width: 60%;
     display: flex;
-    justify-content: space-around;
-    
+    gap: 20px;
 }
+
 header nav a{
     text-decoration: none;
     font-size: var(--size);
     color: var(--color);
-    transition: 0.3s ease-in;
-
 }
+
 header nav a:hover{
     color: var(--hover);
     border-bottom: 1px solid #6633CC;
-    
 }
+
 header #menu-btn{
-    color: var(--color);
+    display: none;
     font-size: var(--size);
     cursor: pointer;
-    display: none;
-}
-header #menu-btn{
     color: var(--color);
 }
 
+/* ================= SECTIONS ================= */
 
 section{
-    padding: 100px 80px;
+    padding: 80px 20px;
 }
-section.main{
-    margin: 200px 100px;
-    width: 100%;
-    min-height: 100vh;
-}
+
+/* ================= MAIN ================= */
+
+/* section.main{
+    text-align: center;
+} */
+
 .main .info{
-    width: 60%;
-    padding: 8px;
+    width: 100%;
 }
+
 .main .info h2{
     color: var(--color);
     font-size: 2.5rem;
+    margin-top: 15px;
     text-transform: capitalize;
-    padding: 6px;
 }
+
 .main .info span{
     color: #CC00FF;
+    margin-bottom: 15px;
 }
+
 .main .info p{
     color: var(--color);
-    font-size: var(--size);
-    padding: 6px;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    
+    margin-bottom: 15px;
 }
+
 .main .info .link-but{
-    padding: 6px;
-    margin-bottom: 10px;
-    width: 300px;
+    width: 250px;
+    /* margin: auto; */
 }
-.main .info .link-but button{
+
+/* ================= BUTTON ================= */
+
+button{
     box-shadow: 0 8px 6px var(--btn-color);
     color: #6633FF;
     border: none;
@@ -108,280 +116,165 @@ section.main{
     padding: 10px;
     border-radius: 8px;
     font-size: var(--size);
-    transition: 0.5s ease;
+    transition: 0.5s;
+    cursor: pointer;
 }
-.main .info .link-but button:hover, form button:hover{
+
+button:hover{
     box-shadow: none;
-    /* background: #CC00FF; */
     border: 1px solid #CC00FF;
     color: #CC00FF;
-    scale: 1.1;
+    transform: scale(1.05);
 }
 
-section.cards{
-    width: 100%;
-    min-height: 100vh;
-    
-}
+/* ================= CARDS ================= */
+
 section.cards .content{
-    width: 100%;
-    min-height: 100vh;
-    padding: 10px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    
     gap: 20px;
-    overflow: hidden;
 }
+
 section.cards .content .card{
-    padding: 15px;
-    width: 70%;
+    width: 300px;
     min-height: 300px;
-   
-    /* background-color: var(--icons); */
     text-align: center;
     box-shadow: 0 8px 10px var(--bgheader);
-
-}
-section.cards .content .card .img-projet{
-    width: 70%;
-    height: 100%;
     padding: 15px;
-    margin: auto;
+}
+
+section.cards .content .card .img-projet{
+    width: 45%;
+    
+   margin: auto;
 }
 section.cards .content .card .img-projet img{
     width: 100%;
+    height: 100px;
+    border-radius: 10px;
 }
+
 section.cards h1{
     text-align: center;
+    text-transform: capitalize;
     color: var(--color);
-    font-size: 50px;
-    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
 
-}
-section.cards .content .card h2, h3{
-    color: var(--color);
-    text-transform: capitalize;
-    margin: 10px 0;
-    font-weight: 600;
-    font-size: 30px;
-}
-section.cards .content .card p{
-    color: var(--btn-color);
-    margin: 10px auto;
-    font-size: 20px;
-}
-section.cards .content .card a{
-    color: var(--color);
-    text-transform: capitalize;
-    font-size: 25px;
-    margin: 10px 0;
-}
-section.cards .content .card a:hover{
-    color: #FF00FF;
-}
-section.cards .content .card .icon-info i{
-    font-size: 25px;
-    color: var(--icons);
-}
-section.cards .content .card h3 i{
-    font-size: 25px;
-    color: var(--icons);
-}
-section.cards .content .card ul{
-    text-decoration: none;
-}
-section.cards .content .card ul li{
-    text-decoration: none;
-    font-size: 25px;
-    color: #FF00FF;
-    margin-bottom: 8px;
-    margin-left: 6px;
-}
+section.cards .content .card .icon-info i,
 section.cards .content .card ul li i{
-    text-decoration: none;
+    font-size: 30px;
     color: var(--icons);
+    margin-bottom: 15px;
 }
-section.contact{
-    width: 100%;
-    
+
+section.cards .content .card ul{
+    list-style: none;
 }
-section.contact .cont h1 {
-    text-align: center;
+
+
+
+.card h2, .card h3{
     color: var(--color);
-    font-size: 50px;
-    text-transform: uppercase;
-    
 }
-section.contact .cont form{
-    width: 45%;
+
+.card p, li{
+    color: var(--btn-color);
+}
+
+.card a{
+    color: var(--color);
+}
+
+.card a:hover{
+    color: #FF00FF;
+}
+
+/* ================= CONTACT ================= */
+
+section.contact .cont{
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 15px;
-
 }
-section.contact .cont form input{
-    width: 300px;
-    height: 30px;
-    padding: 12px;
-    font-size: 18px;
-    color: var(--btn-color);
-    border: 1px solid var(--btn-color);
 
-}
-section.contact .cont form textarea{
-    width: 300px;
-    height: 150px;
-    padding: 12px;
-    font-size: 18px;
-    color: var(--btn-color);
-    border: 1px solid var(--btn-color);
-
-}
-section.contact .cont form button {
-    box-shadow: 0 8px 6px var(--btn-color);
-    color: #6633FF;
-    border: none;
+section.contact .cont form{
     width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    font-size: var(--size);
-    transition: 0.5s ease;
-    width: 80%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-section.contact .cont form button:hover{
-    box-shadow: none;
-    /* background: #CC00FF; */
-    border: 1px solid #CC00FF;
-    color: #CC00FF;
-    scale: 1.1;
+
+section.contact .cont form input,
+section.contact .cont form textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--btn-color);
+    color: var(--btn-color);
 }
+
+/* ================= FOOTER ================= */
 
 footer{
     width: 100%;
     height: 100px;
-    padding: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-footer .social {
-    width: 100%;
-}
+
 footer .social a{
     color: var(--icons);
     font-size: 30px;
     padding: 8px;
-    transition: 0.3s ease;
 }
-footer .social a:hover{
-    border-bottom: 1px solid #CC00FF;
-}
-footer p {
+
+footer p{
     color: var(--btn-color);
-    font-size: var(--size);
-    width: 100%;
 }
 
+/* ================= RESPONSIVE ================= */
 
+@media(max-width: 768px){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media(min-width:650px) and (max-width:1150px){
-    section.cards{
-        width: 100%;
-    }
-    section.cards .content{
-        width: 100%;
-        min-height: 100vh;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        overflow: hidden;
-    }
-    section.cards .content .card{
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    form{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-    
-    }
-    
-
-    header #menu-btn{
-        display: inline-block;
-    }
-    header #menu-btn.fa-times{
-        transform: rotate(180deg);
-    }
-
-    header nav {
-        color: var(--bgheader);
+    header nav{
         position: absolute;
-        top:99%;
-        left:0;
-        right:0;
-        width: 100%;
-        border-top: 1rem solid var(--bgheader);
-        background-color: var(--navColor);
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--navColor);
         display: block;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }   
+        text-align: center;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+        transition: 0.3s;
+    }
+
     header nav.active{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    } 
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+
     header nav a{
         display: block;
-        margin: 2rem;
+        margin: 15px;
     }
-    
+
+    header #menu-btn{
+        display: block;
+    }
+
+    section.cards .content .card{
+        width: 90%;
+    }
+
+    section.main{
+        text-align: center;
+    }
+
+    .main .info .link-but{
+        width: 250px;
+        margin: auto;
+    }
+        
 }
